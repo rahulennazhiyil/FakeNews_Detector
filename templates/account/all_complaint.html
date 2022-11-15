@@ -1,0 +1,39 @@
+{% extends 'dashboard/dashboard.html' %}
+{% load crispy_forms_tags %}
+{% block content %} 
+<div id="page-wrapper">
+    <div class="main-page">
+        <div class="tables">
+            <h3 class="title1">Tables</h3>
+            <div class="panel-body widget-shadow">
+                <h4>List Table </h4>
+                <!-- <div>{% if messages %} {% for mess in messages %}
+                    <b style="color: brown;">{{mess}}</b> {% endfor %} {% endif %}</div> -->
+            </div>
+                <table class="table" style="background-color: burlywood;">
+                    <thead>
+                        <tr>
+            
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>News</th>
+                    
+                        </tr>
+                    </thead>
+                    {% for l in c %}
+                    <tbody>
+                        <tr>
+                            <td>{{l.user}}</td>
+                            <td>{{l.title}}</td>
+                            <td>{{l.complaint}}</td>
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    {% endblock %}
+    
